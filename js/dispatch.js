@@ -38,8 +38,8 @@ function startClock() {
 async function loadDashboard() {
     const overlay = document.getElementById('loadingOverlay');
     try {
-        // 使用统一的 dashboard 接口一次获取所有数据
-        const res = await fetch(`${API_BASE}/api/dashboard`);
+        // 使用统一的 dashboard 接口一次获取所有数据（融合后端中水库/排沙数据在 /api/reservoir/dashboard）
+        const res = await fetch(`${API_BASE}/api/reservoir/dashboard`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
 

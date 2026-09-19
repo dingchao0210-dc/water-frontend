@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>河南省智慧水网监测与调度示范应用系统 - 数据管理</title>
+    <link rel="stylesheet" href="css/water-dispatch.css">
+</head>
+<body class="admin-page">
+    <header class="top-header">
+        <div class="header-left">
+            <div class="logo-mark"><div class="logo-wave"></div><div class="logo-wave"></div><div class="logo-wave"></div></div>
+            <div class="title-group">
+                <h1 class="system-title">河南省智慧水网监测与调度示范应用系统</h1>
+                <span class="system-subtitle">Data Management</span>
+            </div>
+        </div>
+        <div class="header-center"><div class="header-location"><span class="location-dot"></span>数据管理中心</div></div>
+        <nav class="header-nav">
+            <a href="supply-config.html" class="nav-item">供水配置</a>
+            <a href="water-dispatch.html" class="nav-item">水量调度</a>
+            <a href="admin.html" class="nav-item active">数据管理</a>
+        </nav>
+        <div class="header-right"><span class="header-icon">&#9881;</span></div>
+    </header>
+
+    <main class="admin-shell">
+        <aside class="admin-sidebar">
+            <button class="admin-tab active" data-page="dashboard">水量调度数据</button>
+            <button class="admin-tab" data-page="supply-config">供水配置数据</button>
+            <div class="admin-help">
+                <p>说明：</p>
+                <p>1. 左侧切换页面数据。</p>
+                <p>2. 每个模块都可以在表格中直接修改。</p>
+                <p>3. 列表模块支持新增行和删除行。</p>
+                <p>4. 保存后刷新对应大屏页面查看效果。</p>
+            </div>
+        </aside>
+
+        <section class="admin-editor-panel">
+            <div class="admin-toolbar">
+                <div>
+                    <h2 id="adminTitle">水量调度数据</h2>
+                    <p id="adminSubtitle">表格化修改后端 JSON 数据</p>
+                </div>
+                <div class="admin-actions">
+                    <button id="reloadBtn" class="admin-btn">重新加载</button>
+                    <button id="saveBtn" class="admin-btn primary">保存修改</button>
+                </div>
+            </div>
+            <div id="formContainer" class="admin-form-container"></div>
+            <div id="adminMessage" class="admin-message"></div>
+        </section>
+    </main>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
