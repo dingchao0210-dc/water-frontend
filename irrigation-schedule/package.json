@@ -1,0 +1,26 @@
+{
+  "name": "irrigation-schedule",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "element-plus": "^2.14.7",
+    "vue": "^3.5.39",
+    "vue3-pdf-app": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.2",
+    "@vitejs/plugin-vue": "^6.0.9",
+    "@vue/tsconfig": "^0.9.1",
+    "sass-embedded": "^1.100.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.4",
+    "vue-tsc": "^3.3.5"
+  }
+}

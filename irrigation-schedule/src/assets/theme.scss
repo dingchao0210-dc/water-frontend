@@ -1,0 +1,17 @@
+$bg-dark: #143055;
+$bg-card: #17345c;
+$primary-blue: #2896F7;
+$text-main: #E6F0FF;
+$text-sub: #94B8E0;
+$border-line: #22477A;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $bg-dark;
+  color: $text-main;
+  font-family: "Microsoft YaHei", sans-serif;
+}

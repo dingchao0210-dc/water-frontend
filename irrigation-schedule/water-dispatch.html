@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>河南省智慧水网监测与调度示范应用系统 - 水量调度</title>
+    <link rel="stylesheet" href="css/water-dispatch.css">
+</head>
+<body>
+    <div id="loadingOverlay" class="loading-overlay"><div class="loading-spinner"></div><div class="loading-text">数据加载中...</div></div>
+
+    <header class="top-header">
+        <div class="header-left">
+            <div class="logo-mark"><div class="logo-wave"></div><div class="logo-wave"></div><div class="logo-wave"></div></div>
+            <div class="title-group">
+                <h1 class="system-title">河南省智慧水网监测与调度示范应用系统</h1>
+                <span class="system-subtitle">Henan Smart Water Network Monitoring &amp; Dispatch System</span>
+            </div>
+        </div>
+        <div class="header-center"><div id="headerTime" class="header-time">--:--:--</div></div>
+        <nav class="header-nav">
+            <a href="#" class="nav-item">年度需水</a>
+            <a href="#" class="nav-item">需水预测</a>
+            <a href="supply-config.html" class="nav-item">供水配置</a>
+            <a href="water-dispatch.html" class="nav-item active">水量调度</a>
+            <a href="#" class="nav-item">闸站控制</a>
+            <a href="#" class="nav-item">调度方案</a>
+            <a href="admin.html" class="nav-item">数据管理</a>
+        </nav>
+        <div class="header-right"><span class="header-icon">&#128269;</span><span class="header-icon bell-icon">&#128276;<span class="bell-badge">3</span></span><span class="header-icon">&#9881;</span><span class="header-icon">&#9974;</span></div>
+    </header>
+
+    <div class="main-content">
+        <aside class="left-panel">
+            <div class="panel">
+                <div class="panel-header"><span class="panel-title">方案设置</span></div>
+                <div class="panel-body">
+                    <div class="info-row"><span class="info-label">供水方案</span><span id="supplyPlan" class="info-value text-yellow">--</span></div>
+                    <div class="info-row"><span class="info-label">调度方案</span><span id="dispatchPlan" class="info-value text-yellow">--</span></div>
+                    <div class="info-row"><span class="info-label">方案时间</span><span id="planTime" class="info-value">--</span></div>
+                    <div class="info-row"><span class="info-label">方案状态</span><span id="planStatus" class="info-value status-tag">--</span></div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header"><span class="panel-title">调度总览</span></div>
+                <div class="panel-body">
+                    <div class="kpi-row">
+                        <div class="kpi-item"><div class="kpi-icon-small">●</div><div class="kpi-text"><span class="kpi-label-small">天数</span><span id="kpiDays" class="kpi-value-small">--</span></div></div>
+                        <div class="kpi-divider"></div>
+                        <div class="kpi-item"><div class="kpi-icon-small kpi-icon-yellow">●</div><div class="kpi-text"><span class="kpi-label-small">灌片</span><span id="kpiAreas" class="kpi-value-small">--</span></div></div>
+                        <div class="kpi-divider"></div>
+                        <div class="kpi-item"><div class="kpi-icon-small kpi-icon-green">●</div><div class="kpi-text"><span class="kpi-label-small">水量</span><span id="kpiWater" class="kpi-value-small">--</span></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel flex-1">
+                <div class="panel-header"><span class="panel-title">供水水序</span></div>
+                <div class="panel-body scrollable"><div id="timelineContainer" class="timeline"></div></div>
+            </div>
+        </aside>
+
+        <main class="map-area">
+            <div class="map-bg"></div>
+            <div id="mapTagBar" class="map-tag-bar"></div>
+            <div id="mapBubblesContainer"></div>
+            <div id="canalLabelsContainer"></div>
+            <div class="map-bottom-bar"><div id="channelButtons" class="channel-buttons"></div></div>
+            <div class="supply-time-panel">
+                <div class="panel-header"><span class="panel-title">供水时间</span></div>
+                <div class="panel-body scrollable">
+                    <table class="supply-time-table">
+                        <thead><tr><th>渠道名称</th><th>开始日期</th><th>结束日期</th><th>时长(h)</th></tr></thead>
+                        <tbody id="supplyTimeBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/water-dispatch.js"></script>
+</body>
+</html>
